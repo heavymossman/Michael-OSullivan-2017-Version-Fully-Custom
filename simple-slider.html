@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Simple JS Image Slider< - Michael O'Sullivan - Digital Front End Web Developer, London</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans" rel="stylesheet">
+    <style type="text/css">
+      body {
+      font-family: 'Work Sans', sans-serif;
+      }
+      h1,h2,h3,h4,h5,h6 {
+      font-family: 'Space Mono', monospace;
+      }
+      .navbar-nav .nav-link {
+      display: block;
+      padding-top: 1.2rem;
+      padding-bottom: .425rem;
+      padding-left: 1rem;
+      }
+      .redbk {
+      background-color: #c32519; 
+      color: white;
+      } 
+      .dilbk {
+      background-color: #d8f1fa; 
+      color: black;
+      } 
+      .snomeebk {
+      background-color: #DB6300; 
+      color: white;
+      } 
+      /* unvisited link */
+      a:link {
+      color: rgba(0,0,0,.5);
+      text-decoration-style: none;
+      }
+      /* visited link */
+      a:visited {
+      color: rgba(0,0,0,.5);
+      text-decoration-style: none;
+      }
+      /* mouse over link */
+      a:hover {
+      color: rgba(0,0,0,.99);
+      text-decoration-style: underline;
+      }
+      /* selected link */
+      a:active {
+      color: rgba(0,0,0,.99);
+      text-decoration-style: underline;
+      }
+      .bg-faded {
+      background-color: #f8f6f6;
+      }
+
+
+      #slider-container{
+        width: 980px;
+        margin: 40px auto;
+        overflow: hidden;
+      }
+
+      #slider {
+        width: 950px;
+        height: 350px;
+        position: relative; 
+        overflow: hidden;
+        float: left;
+        padding: 3px;
+        border: #666 solid 2px;
+        border-radius: 5px;
+      }
+
+      #slider img {
+        width: 940px;
+        height: 340px;
+      }
+
+      .slide {
+        position: absolute;
+      }
+
+      .slide-content {
+        background-color: rgba(78, 78, 78, 0.9);
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+
+      }
+
+      #prev, #next {
+        float: left;
+        margin-top: 130px;
+        cursor: pointer;
+        position: relative;
+        z-index: 100;
+      }
+
+      #prev {
+        margin-right: -45px;
+      }
+
+      #next {
+        margin-left: -45px;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container-fluid px-0">
+        <div class="red ">
+        </div>
+        <nav class="navbar navbar-light bg-faded">
+          <div class="container">
+            <a class="navbar-brand" href="/" id="logo"><img src=""></a>
+            <!-- Toggle Button -->
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#nav-content">
+            ☰
+            </button>
+            <!-- Nav Content -->
+            <div class="collapse navbar-toggleable-xs mr-2" id="nav-content">
+              <ul class="nav navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="menu-one"></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle menu-three" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false""></a>
+                  <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+                    <a class="dropdown-item" href="#" id="campaignDropdown1"></a>
+                    <a class="dropdown-item" href="#" id="campaignDropdown2"></a>
+                    <a class="dropdown-item" href="#" id="campaignDropdown3"></a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle menu-six" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn1"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn2"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn3"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn4"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn5"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn6"></a>
+                     <a class="dropdown-item" href="#" id="followUsDropdowqn7"></a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="menu-two"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="menu-four"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="menu-five"></a>
+                </li>
+              </ul>
+              <ul>
+              </ul>
+            </div>
+        </nav>
+        </nav>
+        </div>
+      </div>
+    </section>
+    </nav>
+    </div></section>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Simple JS Image Slider</h1>
+          <p>A simple fully custom jQuery Image slider</p>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+
+          <div id="slider-container">
+
+            <img src="images/slider/arrow-left.png" alt="Prev" id="prev">
+
+              <div id="slider">
+
+                <div class="slide">
+
+                  <div class="slide-content">
+                    <h2>Slider One</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+
+                  <img src="images/slider/image1.jpg">
+
+                </div>
+
+                <div class="slide">
+
+                  <div class="slide-content">
+                    <h2>Slider Two</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+
+                  <img src="images/slider/image2.jpg">
+
+                </div>
+
+                <div class="slide">
+
+                  <div class="slide-content">
+                    <h2>Slider Three</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+
+                  <img src="images/slider/image3.jpg">
+
+                </div>
+
+                <div class="slide">
+
+                  <div class="slide-content">
+                    <h2>Slider Four</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+
+                  <img src="images/slider/image4.jpg">
+
+                </div>
+
+              </div><!--slider-->
+
+            <img src="images/slider/arrow-right.png" alt="Prev" id="next">
+
+          
+          </div><!----slider container>
+        </div><!---- col-md-12 and #slider-container-->
+
+      </div>
+    </div></div>
+    <!--container-->
+    <section>
+      <footer class="mt-2">
+        <div class="container-fluid bg-faded">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 pt-1">
+                <p class="small">Designed and Created by Michael O'Sullivan © 2017 | <a href="#">Privacy Policy</a> | <a href="#">Cookies</a> | <a href="#">Contact Me</a></p>
+              </div>
+              <div class="col-md-4 text-xs-right pt-1">
+                <p class="small">Designed and Built in London</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    
+    <script src="js/cms.js"></script>
+    <script src="js/simple-slider.js"></script>
+  </body>
+</html>

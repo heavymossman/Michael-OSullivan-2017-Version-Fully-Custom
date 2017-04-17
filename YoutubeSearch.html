@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Youtube Search Engine API - Michael O'Sullivan - Digital Front End Web Developer, London</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+
+
+
+
+    <style type="text/css">
+      body {
+      font-family: 'Work Sans', sans-serif;
+      }
+      h1,h2,h3,h4,h5,h6 {
+      font-family: 'Space Mono', monospace;
+      }
+      .navbar-nav .nav-link {
+      display: block;
+      padding-top: 1.2rem;
+      padding-bottom: .425rem;
+      padding-left: 1rem;
+      }
+      .redbk {
+      background-color: #c32519; 
+      color: white;
+      } 
+      .dilbk {
+      background-color: #d8f1fa; 
+      color: black;
+      } 
+      .snomeebk {
+      background-color: #DB6300; 
+      color: white;
+      } 
+      /* unvisited link */
+      a:link {
+      color: rgba(0,0,0,.5);
+      text-decoration-style: none;
+      }
+      /* visited link */
+      a:visited {
+      color: rgba(0,0,0,.5);
+      text-decoration-style: none;
+      }
+      /* mouse over link */
+      a:hover {
+      color: rgba(0,0,0,.99);
+      text-decoration-style: underline;
+      }
+      /* selected link */
+      a:active {
+      color: rgba(0,0,0,.99);
+      text-decoration-style: underline;
+      }
+      .bg-faded {
+      background-color: #f8f6f6;
+      }
+
+      .input-group .form-control:not(:last-child), .input-group-addon:not(:last-child), .input-group-btn:not(:first-child)>.btn-group:not(:last-child)>.btn, .input-group-btn:not(:first-child)>.btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:not(:last-child)>.btn, .input-group-btn:not(:last-child)>.btn-group>.btn, .input-group-btn:not(:last-child)>.dropdown-toggle {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    background-color: rgba(255, 0, 0, 0.21);
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+    .fieldcontainer {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+
+    }
+
+    .search-field {
+      width: 45%;
+      padding: .75rem 1.5rem;
+      font-size: 1.25rem;
+      border-radius: .3rem;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      background-color: rgba(255, 0, 0, 0.21);
+      position: relative;
+      z-index: 2;
+      float: left;
+      margin-bottom: 0;
+      display: block; */
+      line-height: 1.25;
+      color: #55595c;
+      background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+      }
+
+    .btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d9534f;
+    min-height: 56px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container-fluid px-0">
+        <div class="red ">
+        </div>
+        <nav class="navbar navbar-light bg-faded">
+          <div class="container">
+            <a class="navbar-brand" href="/" id="logo"><img src=""></a>
+            <!-- Toggle Button -->
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#nav-content">
+            ☰
+            </button>
+            <!-- Nav Content -->
+            <div class="collapse navbar-toggleable-xs mr-2" id="nav-content">
+              <ul class="nav navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="menu-one"></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle menu-three" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false""></a>
+                  <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+                    <a class="dropdown-item" href="#" id="campaignDropdown1"></a>
+                    <a class="dropdown-item" href="#" id="campaignDropdown2"></a>
+                    <a class="dropdown-item" href="#" id="campaignDropdown3"></a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle menu-six" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn1"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn2"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn3"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn4"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn5"></a>
+                    <a class="dropdown-item" href="#" id="followUsDropdowqn6"></a>
+                     <a class="dropdown-item" href="#" id="followUsDropdowqn7"></a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="menu-two"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="menu-four"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="menu-five"></a>
+                </li>
+              </ul>
+              <ul>
+              </ul>
+            </div>
+        </nav>
+        </nav>
+        </div>
+      </div>
+    </section>
+    </nav>
+    </div></section>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Youtube Custom API Search Engine</h1>
+          <p>A simple fully custom Youtube Search Engine with API feed </p>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+
+          
+        <h2>Polsear Search</h2>
+        <p>Show all the videos from any Youtube Channel instantly</p>
+
+          <div class="row">
+
+            <div class="col-lg-9">
+              <form id="search-form" name="search-form" onsubmit="return search()">
+                <div class="input-group fieldcontainer">
+                  <input type="search" class="search-field" placeholder="Search for..." id="query">
+                  <span class="input-group-btn">
+                    <button class="btn btn-danger btn-lg" type="submit" name="search-btn" id="search-btn">Go!</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+         
+
+          <div id="results" class="py-2">
+
+
+          </div>
+
+
+          <div id="buttons"></div>
+
+
+      </div>
+    </div></div>
+    <!--container-->
+    <section>
+      <footer class="mt-2">
+        <div class="container-fluid bg-faded">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 pt-1">
+                <p class="small">Designed and Created by Michael O'Sullivan © 2017 | <a href="#">Privacy Policy</a> | <a href="#">Cookies</a> | <a href="#">Contact Me</a></p>
+              </div>
+              <div class="col-md-4 text-xs-right pt-1">
+                <p class="small">Designed and Built in London</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    
+    <script src="js/cms.js"></script>
+    <script src="js/youtubesearch.js"></script>
+
+   
+
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.6"></script>
+
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".various").fancybox({
+          maxWidth  : 800,
+          maxHeight : 600,
+          fitToView : false,
+          width   : '70%',
+          height    : '70%',
+          autoSize  : false,
+          closeClick  : false,
+          openEffect  : 'none',
+          closeEffect : 'none'
+        });
+      });
+    </script>
+
+  </body>
+</html>

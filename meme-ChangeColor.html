@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>MemeMaker</title>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>
+    #image-container {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+   
+    
+  </script>
+
+  <div>
+    <input type="file" id="file" />  
+  </div>
+  <div id="image-container">
+    <canvas id="c" width="700" height="700"></canvas>
+    <div>
+      <span>Top Line:</span><br/>
+      <input id="topLineText" type="text"><br/>
+      <span>Bottom Line:</span><br/>
+      <input id="bottomLineText" type="text"><br/>
+      <button id="saveBtn">Save</button>
+      <a href="/">Back Home</a>
+    </div>
+  </div>
+  <script type="text/javascript">
+      
+      //HTML 5 Meme Generator and Game
+
+      var c = document.querySelector("#c"); 
+      var ctx = c.getContext("2d");
+
+      var image = new Image(); 
+
+    /*  image.onload = function() {
+        console.log("Loaded Image")
+        ctx.drawImage(image, 0, 0, c.width, c.height); // this draws the image object to the canvass and displays it based on the html paramenters
+        var savedImage = c.toDataURL(); //this will store the URL of the image in a varialbe,  
+        window.open(savedImage); //This will open the stores URL in a new window or tab, where the user can right click and save as
+      }
+
+      image.src = "https://pbs.twimg.com/media/C0zGXi8UcAAiA6N.jpg";  */
+
+      ctx.fillStyle = "blue";
+      // Start at (0,0) and draw a 50px x 50px blue rectangle.
+      ctx.fillRect(0,0,50,50);
+      // Start at (0,0) and clear a 25px x 25px rectangle.
+      ctx.clearRect(0,0,25,25);
+
+      ctx.clearRect(0, 0, c.width, c.height); // this will make it completely blank or clear it
+
+
+
+
+    </script>
+
+</body>
+</html>

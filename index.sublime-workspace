@@ -1,0 +1,899 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"para",
+				"paragraph"
+			],
+			[
+				"app",
+				"append"
+			],
+			[
+				"family",
+				"family1"
+			],
+			[
+				"arti",
+				"articleItems"
+			],
+			[
+				"change",
+				"changeVar"
+			],
+			[
+				"remove",
+				"remove"
+			],
+			[
+				"chang",
+				"changeVar"
+			],
+			[
+				"art",
+				"articleItems"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"article",
+				"articleItems"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"artic",
+				"articleItems"
+			],
+			[
+				"aricle",
+				"articleItems"
+			],
+			[
+				"fist",
+				"firstitem"
+			],
+			[
+				"thid",
+				"thirdArticle"
+			],
+			[
+				"thi",
+				"thirdArticle"
+			],
+			[
+				"feat",
+				"featuredArticle"
+			],
+			[
+				"wr",
+				"workNew"
+			],
+			[
+				"work",
+				"work_obj"
+			],
+			[
+				"loc",
+				"locations"
+			],
+			[
+				"wor",
+				"workNew"
+			],
+			[
+				"loca",
+				"location"
+			],
+			[
+				"forma",
+				"formattedContacts"
+			],
+			[
+				"format",
+				"formattedMobile"
+			],
+			[
+				"onlin",
+				"onlineMessage"
+			],
+			[
+				"formatt",
+				"formattedCourse"
+			],
+			[
+				"cour",
+				"course-entry"
+			],
+			[
+				"wha",
+				"whatever"
+			],
+			[
+				"on",
+				"online-courses"
+			],
+			[
+				"school",
+				"schoolCompleted"
+			],
+			[
+				"schoo",
+				"schoomMajor"
+			],
+			[
+				"form",
+				"formattedSchoolCity"
+			],
+			[
+				"sc",
+				"schooName"
+			],
+			[
+				"new",
+				"newSkillsting"
+			],
+			[
+				"final",
+				"finalName"
+			],
+			[
+				"fina",
+				"finalName"
+			],
+			[
+				"last",
+				"lastName"
+			],
+			[
+				"first",
+				"firstName"
+			],
+			[
+				"my",
+				"myNumberArray"
+			],
+			[
+				"fun",
+				"funThoughts"
+			],
+			[
+				"current",
+				"currentValue"
+			],
+			[
+				"del",
+				"delMessage"
+			],
+			[
+				"pos",
+				"postMessage"
+			],
+			[
+				"inter",
+				"interestRatePercent"
+			],
+			[
+				"print",
+				"printAccountSummary"
+			],
+			[
+				"num",
+				"numbers"
+			],
+			[
+				"elem",
+				"element"
+			],
+			[
+				"col",
+				"colum"
+			],
+			[
+				"cu",
+				"currentValue"
+			],
+			[
+				"sort",
+				"sortMe"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"an",
+				"answer"
+			],
+			[
+				"c",
+				"counter"
+			],
+			[
+				"tim",
+				"timer"
+			],
+			[
+				"eats",
+				"eatsPlants"
+			],
+			[
+				"h",
+				"herbivore"
+			],
+			[
+				"ea",
+				"eatsPlants"
+			],
+			[
+				"local",
+				"localhost"
+			],
+			[
+				"glo",
+				"glossary-search"
+			],
+			[
+				"mysql_num",
+				"mysql_num_rows"
+			],
+			[
+				"sear",
+				"searchq"
+			],
+			[
+				"mysql",
+				"mysql_error"
+			],
+			[
+				"shir",
+				"shirtLength"
+			],
+			[
+				"shirt",
+				"shirtSleeve"
+			],
+			[
+				"is",
+				"isActive"
+			],
+			[
+				"bi",
+				"Billiards"
+			],
+			[
+				"too",
+				"tooExpensive"
+			],
+			[
+				"d",
+				"duet"
+			],
+			[
+				"onl",
+				"onclick\tAttr"
+			],
+			[
+				"ou",
+				"outgoings"
+			],
+			[
+				"get",
+				"getElementById"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <!-- Required meta tags always come first -->\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n    <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">\n    <title>Michael O'Sullivan - Digital Front End Web Developer, London</title>\n\n    <!-- Bootstrap CSS -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css\" integrity=\"sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi\" crossorigin=\"anonymous\">\n\n    <link href=\"https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans\" rel=\"stylesheet\">\n\n    <style type=\"text/css\">\n\n    body {\n      font-family: 'Work Sans', sans-serif;\n    }\n\n\n    h1,h2,h3,h4,h5,h6 {\n      font-family: 'Space Mono', monospace;\n    }\n\n\n      .navbar-nav .nav-link {\n    display: block;\n    padding-top: 1.2rem;\n    padding-bottom: .425rem;\n    padding-left: 1rem;\n    }\n\n    .display-3 {\n    font-size: 3rem;\n    font-weight: 300;\n    }\n\n\n    .jumbotron{\n      color: white;\n    }\n\n    .redbk {\n    background-color: #c32519; \n    color: white;\n    } \n\n    .dilbk {\n    background-color: #d8f1fa; \n    color: black;\n    } \n\n    .snomeebk {\n    background-color: #DB6300; \n    color: white;\n    } \n\n    /* unvisited link */\n    a:link {\n        color: rgba(0,0,0,.5);\n        text-decoration-style: none;\n    }\n\n    /* visited link */\n    a:visited {\n        color: rgba(0,0,0,.5);\n        text-decoration-style: none;\n    }\n\n    /* mouse over link */\n    a:hover {\n        color: rgba(0,0,0,.99);\n        text-decoration-style: underline;\n    }\n\n    /* selected link */\n    a:active {\n        color: rgba(0,0,0,.99);\n        text-decoration-style: underline;\n    }\n\n    .bg-faded {\n      background-color: #f8f6f6;\n    }\n\n      #map {\n        width: 100%;\n        height: 400px;\n        background-color: grey;\n      }\n\n\n    </style>\n\n  </head>\n  <body>\n    \n    <section>\n      <div class=\"container-fluid px-0\">\n        <div class=\"red \">\n        </div>\n        <nav class=\"navbar navbar-light bg-faded\">\n          <div class=\"container\">\n            <a class=\"navbar-brand\" href=\"/\" id=\"logo\"><img src=\"\"></a>\n            <!-- Toggle Button -->\n            <button class=\"navbar-toggler hidden-sm-up\" type=\"button\" data-toggle=\"collapse\" data-target=\"#nav-content\">\n            ☰\n            </button>\n            <!-- Nav Content -->\n            <div class=\"collapse navbar-toggleable-xs mr-2\" id=\"nav-content\">\n              <ul class=\"nav navbar-nav\">\n              <li class=\"nav-item\">\n                  <a class=\"nav-link\" href=\"#\" id=\"menu-one\"></a>\n                </li>\n\n\n                     <li class=\"nav-item dropdown\">\n                  <a class=\"nav-link dropdown-toggle menu-three\" href=\"http://example.com\" id=\"supportedContentDropdown\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"\"></a>\n                  <div class=\"dropdown-menu\" aria-labelledby=\"supportedContentDropdown\">\n                    <a class=\"dropdown-item\" href=\"#\" id=\"campaignDropdown1\"></a>\n                    <a class=\"dropdown-item\" href=\"#\" id=\"campaignDropdown2\"></a>\n                    <a class=\"dropdown-item\" href=\"#\" id=\"campaignDropdown3\"></a>\n                  </div>\n                </li>\n\n\n                             <li class=\"nav-item dropdown\">\n                  <a class=\"nav-link dropdown-toggle menu-six\" href=\"http://example.com\" id=\"supportedContentDropdown\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"></a>\n                  <div class=\"dropdown-menu\" aria-labelledby=\"supportedContentDropdown\">\n                    <a class=\"dropdown-item\" href=\"#\" id=\"followUsDropdowqn1\"></a>\n                    <a class=\"dropdown-item\" href=\"#\" id=\"followUsDropdowqn2\"></a>\n                    <a class=\"dropdown-item\" href=\"#\" id=\"followUsDropdowqn3\"></a>\n                    <a class=\"dropdown-item\" href=\"#\" id=\"followUsDropdowqn4\"></a>\n                    <a class=\"dropdown-item\" href=\"#\" id=\"followUsDropdowqn5\"></a>\n                    <a class=\"dropdown-item\" href=\"#\" id=\"followUsDropdowqn6\"></a>\n                     <a class=\"dropdown-item\" href=\"#\" id=\"followUsDropdowqn7\"></a>\n\n                  </div>\n                </li>\n\n\n                 <li class=\"nav-item\">\n                  <a class=\"nav-link\" href=\"#\" id=\"menu-two\"></a>\n                </li>\n                 <li class=\"nav-item\">\n                  <a class=\"nav-link\" href=\"#\" id=\"menu-four\"></a>\n                </li>\n                    <li class=\"nav-item\">\n                  <a class=\"nav-link\" href=\"#\" id=\"menu-five\"></a>\n                </li>\n\n                \n              </ul>\n              <ul>\n              </ul>\n            </div>\n        </nav></nav>\n\n        </div>\n      </div>\n    </section></nav>\n\n\n  <div class=\"jumbotron jumbotron-fluid\">\n      <div class=\"container \">\n        <h1 class=\"display-3 white\" id=\"mainHeader\"></h1>\n        <p class=\"lead\">I design products from the ground up for people who want thoughtful, elegant solutions to their toughest problems. I am deliver expert political and business campaigns, ensuring ROI and success for all clients </p>\n      </div>\n    </div>\n\n</div></section>\n\n\n    <div class=\"container\">\n    \n      <div class=\"row\">\n\n        <div class=\"col-md-12\">\n\n          <h1>Latest Work</h2>\n\n        </div>\n\n      </div>\n\n      <div class=\"row py-2 px-2\">\n\n        <div class=\"col-md-12 redbk py-2\">\n\n          <h2>Vote Leave / Labour Leave</h2>\n\n        </div>\n\n      </div>\n\n      <div class=\"row py-2 px-2\">\n\n        <div class=\"col-md-12 dilbk py-2\">\n\n          <h2>Diligence</h2>\n\n        </div>\n\n      </div>\n\n       <div class=\"row py-2 px-2\">\n\n        <div class=\"col-md-12 snomeebk py-2\">\n\n          <h2>Snomee</h2>\n\n        </div>\n\n      </div>\n\n       <div class=\"row mt-2\">\n\n        <div class=\"col-md-12\">\n\n          <h1 class=\"py-1\">Work Experience</h1>\n\n        </div>\n\n        <div class=\"row px-2 py-2\">\n\n          <div class=\"col-md-12\">\n\n            <p class=\"mb-0\" id=\"employer1\"></p>\n            <footer class=\"blockquote-footer\" id=\"dates1\"></footer>\n            <p id=\"location1\"></p>\n            <p id=\"description1\"></p>\n\n          </div>\n\n        </div>\n\n         <div class=\"row px-2 py-2\">\n\n          <div class=\"col-md-12\">\n\n            <p class=\"mb-0\" id=\"employer2\"></p>\n            <footer class=\"blockquote-footer\" id=\"dates2\"></footer>\n            <p id=\"location2\"></p>\n            <p id=\"description2\"></p>\n\n          </div>\n\n        </div>\n\n</div>\n    </div><!--container-->\n\n\n    <section>\n      \n      <div class=\"container\">\n\n    <!--    <div class=\"row\">\n\n          <div class=\"col-md-12\"> \n\n            \n\n              <h1 class=\"py-1\">About Me</h1>\n              <p>Bio Pic: <img src=\"#\" class=\"img-fluid\" id=\"bioPic\"></p></p>\n              <p>Name: <span id=\"bioName\"></span></p>\n              <p>Age: <span id=\"bioAge\"></span></p>\n              <p>Location: <span id=\"bioLoc\"></span></p>\n              <p>Skills: <span id=\"bioSkills\"></span></p>\n             \n              <h3>Contact Details</h3>\n              <ul id=\"contacts\">\n                <li id=\"mobile\"></li>\n              </ul>\n            \n\n          </div>\n\n\n        </div> -->\n\n        <div class=\"row\">\n\n          <div class=\"col-md-12\">\n\n          <h2>Education</h2>\n\n            <div id=\"education\">\n\n              <div class=\"school-entry\"></div>\n\n                <div class=\"course-entry\"></div>\n\n                </div>\n\n            </div>\n\n          </div>\n\n               <div class=\"row\">\n\n          <div class=\"col-md-12\">\n\n            <h2>Get in touch</h2>\n\n            <div class=\"contacts\"></div>\n\n            <hr>\n\n          </div>\n\n          </div>\n\n\n\n       \n\n          <div class=\"row\">\n\n            <div class=\"col-md-12\">\n\n              <h2 class=\"py-1\">Where am I today?</h2>\n\n              <div id=\"map\"></div>\n\n            </div>\n\n          </div>\n\n      </div>\n\n\n      \n\n\n\n    </section>\n\n    <section>\n      \n      <footer class=\"mt-2\">\n\n        <div class=\"container-fluid bg-faded\">\n\n          <div class=\"container\">\n      \n              <div class=\"row\">\n\n                <div class=\"col-md-8 pt-1\">\n\n                  <p class=\"small\">Designed and Created by Michael O'Sullivan © 2017 | <a href=\"#\">Privacy Policy</a> | <a href=\"#\">Cookies</a> | <a href=\"#\">Contact Me</a></p>\n\n                </div>\n\n                <div class=\"col-md-4 text-xs-right pt-1\">\n\n                  <p class=\"small\">Designed and Built in London</p>\n\n                </div>\n\n               </div>\n\n          </div>\n\n      </div>\n      </footer>\n\n\n    </section>\n\n\n\n    <!-- jQuery first, then Tether, then Bootstrap JS. -->\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\" integrity=\"sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7\" crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js\" integrity=\"sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8\" crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js\" integrity=\"sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK\" crossorigin=\"anonymous\"></script>\n\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js\"></script>\n\n    <script async>\n      $(\".jumbotron\").backstretch([\n        \"jumbo-image.jpg\",\n        \"https://i.ytimg.com/vi/lRmUngxVTE8/maxresdefault.jpg\",\n        \"https://static.rootsrated.com/image/upload/s--bxVqhnid--/t_rr_large_traditional/m2y2jeizxpta2ueimhrr.jpg\",\n        \"http://s3.amazonaws.com/production.reserve123/images/product/18569-1.jpg\"\n        ],{duration: 1400, fade: 1050}\n        );\n    </script>\n\n    <script src=\"js/cms.js\"></script>\n\n    <script>\n     \n    </script>\n\n     <script async defer\n    src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyD1u37lgnQacoKKCtMwCFjttkz_VL5v3CI&callback=initMap\">\n    </script>\n\n  \n\n  </body>\n</html>",
+			"file": "index.html",
+			"file_size": 10540,
+			"file_write_time": 131360766918736434,
+			"settings":
+			{
+				"buffer_size": 10146,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/cms.js",
+			"settings":
+			{
+				"buffer_size": 13535,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shouldbuy.html",
+			"settings":
+			{
+				"buffer_size": 49139,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Moss/Documents/Udemy/jquery.html",
+			"settings":
+			{
+				"buffer_size": 6000,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/michaels-countdowntimer.js",
+			"settings":
+			{
+				"buffer_size": 1056,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "jsquiz.html",
+			"settings":
+			{
+				"buffer_size": 15423,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "  <section>\n      <div class=\"container-fluid\">\n        <div class=\"container p-a-sm\">\n          <div class=\"text-xs-left megaMargin\">\n            <h1 class=\"pb-2\"> <a href=\"http://www.labourleave.org.uk/today_a_moment_in_history_that_will_be_remembered_forever\">The Brexit Countdown has begun</a></h1>\n            <h2 id=\"timer\"></h2>\n            <p class=\"lead\">When the below clock reaches zero, the UK will have officially left the European Union</p>\n            <a href=\"http://www.labourleave.org.uk/today_a_moment_in_history_that_will_be_remembered_forever\">\n              <h3>Read More ></h3>\n            </a>\n          </div>\n        </div>\n      </div>\n    </section>",
+			"settings":
+			{
+				"buffer_size": 677,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Moss/Documents/Udacity/Udacity-Front-End-Web-Developer-Nanodegree/Project 2 - My Resume/index.html",
+			"settings":
+			{
+				"buffer_size": 5499,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/MAMP/htdocs/Glossary.org.uk/index.php",
+			"settings":
+			{
+				"buffer_size": 2805,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/MAMP/htdocs/Glossary.org.uk/style.css",
+			"settings":
+			{
+				"buffer_size": 388,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<!-- Required meta tags always come first -->\n\t\t<meta charset=\"utf-8\">\n\t\t<meta name=\"description\" content=\"Britain's Achilles Heel Glossary and Further information\">\n\t\t<meta name=\"keywords\" content=\"glossary, economics, labour future, labour leave, the labour party\">\n\t\t<meta name=\"author\" content=\"John Mills, Michael OSullivan\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\t\t<meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">\n\t\t<title>Britain's Achilles Heel - Glossary.org.uk</title>\n\t\t<!-- Bootstrap CSS -->\n\t\t<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css\" integrity=\"sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi\" crossorigin=\"anonymous\">\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href =\"style.css\"/>\n\t\t<link href=\"https://fonts.googleapis.com/css?family=Arimo\" rel=\"stylesheet\">\n\t</head>\n\t<body>\n\t\t<section>\n\t\t\t<div class=\"container mt-2\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-12 mt-3 text-xs-left px-3\">\n\t\t\t\t\t\t\n\t\t\t\t\t\t<?php /*\n\t\t\t\t\t\t\tini_set('display_errors', '1');\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t$search = $_GET['query'];\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t$db = new PDO('mysql:host=localhost;dbname=glossary-search;charset=utf8mb4', 'glossary-search', 'root');\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t$query = $db->query(\"SELECT * FROM results WHERE '$search' LIKE term\");\n\t\t\t\t\t\t\tif(mysql_num_rows($query) >= 1) {\n\t\t\t\t\t\t\t\twhile($a = mysql_fetch_array($query)) {\n\t\t\t\t\t\t\t\t\techo \"YES ITS FUCKING WORKING! '$search' \";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\techo \"Your search for '$search' Oh no! Nothing was found.\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t*/\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t$search = $_GET['query'];\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tmysql_connect(\"localhost\", \"cl56-gloss\", \"DVf!Ffnrh\") or die(mysql_error());\n\t\t\t\t\t\t\tmysql_select_db(\"cl56-gloss\");\n\n\t\t\t\t\t\t\t$search = preg_replace(\"#[^0-9a-z/ ]#i\", \"\", $search); // replaces eveyrthing that is not 0-9 and/or a-z with \"\" or blank\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t$query = mysql_query(\"SELECT * FROM results WHERE term LIKE '%\".$search.\"%' or nickname LIKE '%\".$search.\"%' or description LIKE '%\".$search.\"%' \");\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tif(mysql_num_rows($query) >= 1) {\n\t\t\t\t\t\t\t\techo \"<h1>Results <strong>$search</h1><hr/></strong>\";\n\t\t\t\t\t\t\t\twhile($a = mysql_fetch_array($query)) {\n\t\t\t\t\t\t\t\t\t$drescription = str_replace('?',\"'\",$a['description']);\n\t\t\t\t\t\t\t\t\techo \"<h3 class='py-2'>\".$a['term'].\"</h3>\".\"<p>\".$drescription.\"</p><hr/>\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\techo \"<p>Oh no! Nothing was found for $search</p>\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t?>\n\t\t\t\t\t\t<div class=\"row py-2\">\n\t\t\t\t\t\t\t<a href=\"index.php\" class=\"btn btn-outline-success\">Search again</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<!--container-->\n\t\t</section>\n\t\t<!-- jQuery first, then Tether, then Bootstrap JS. -->\n\t\t<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\" integrity=\"sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7\" crossorigin=\"anonymous\"></script>\n\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js\" integrity=\"sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8\" crossorigin=\"anonymous\"></script>\n\t\t<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js\" integrity=\"sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK\" crossorigin=\"anonymous\"></script>\n\n\t\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js\"></script>\n\n\t    <script async>\n\t      $.backstretch(\"https://web199.secure-secure.co.uk/glossary.org.uk/manu.jpg\");\n\t    </script>\n\n\t</body>\n</html>",
+			"file": "/C/MAMP/htdocs/Glossary.org.uk/results.php",
+			"file_size": 3785,
+			"file_write_time": 131360631256441149,
+			"settings":
+			{
+				"buffer_size": 3708,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Moss/Documents/Michael OSullivan Online Portfolio/2017 Version Fully Custom/js/cms.js",
+		"/C/MAMP/htdocs/Glossary.org.uk/results.php",
+		"/E/Dropbox/LabourTube/index.html",
+		"/C/Users/Moss/Documents/Udacity/Udacity-Front-End-Web-Developer-Nanodegree/Project 2 - My Resume/js/npm.js",
+		"/C/Users/Moss/Documents/Udacity/Udacity-Front-End-Web-Developer-Nanodegree/Project 2 - My Resume/js/var.js",
+		"/C/Users/Moss/Documents/Udacity/JS BOOTCAMP/Form Validation.html",
+		"/C/MAMP/htdocs/Glossary.org.uk/style.css",
+		"/C/MAMP/htdocs/Glossary.org.uk/Insert-Site.php",
+		"/C/MAMP/htdocs/Glossary.org.uk/index.php",
+		"/C/MAMP/htdocs/Glossary.org.uk/index-old.php",
+		"/E/Dropbox/Glossary.org.uk/Insert-Site (1).php",
+		"/C/MAMP/htdocs/Glossary.org.uk/info.php",
+		"/C/Users/Moss/Documents/Michael OSullivan Online Portfolio/2017 Version Fully Custom/YoutubeSearch.html",
+		"/C/Users/Moss/Documents/Michael OSullivan Online Portfolio/2017 Version Fully Custom/simple-slider.html",
+		"/C/Users/Moss/Documents/Michael OSullivan Online Portfolio/2017 Version Fully Custom/bookmarker.html",
+		"/C/Users/Moss/Documents/Michael OSullivan Online Portfolio/2017 Version Fully Custom/jsquiz.html",
+		"/E/Dropbox/Glossary.org.uk/Helpy-master/Helpy-master/source/search-engine/index.php",
+		"/E/Dropbox/Glossary.org.uk/index.html",
+		"/C/Users/Moss/Documents/Udacity/new-jquery-lession.html",
+		"/C/Users/Moss/Documents/Michael OSullivan Online Portfolio/2017 Version Fully Custom/js/space_invaders_main.js",
+		"/C/Users/Moss/Documents/Michael OSullivan Online Portfolio/2017 Version Fully Custom/js/space_invaders_ship.js",
+		"/C/Users/Moss/Documents/Michael OSullivan Online Portfolio/2017 Version Fully Custom/space-invaders.html",
+		"/C/Users/Moss/Documents/Michael OSullivan Online Portfolio/2017 Version Fully Custom/js/space_invaders_main"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"; ",
+			">\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8012,
+								8012
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6588.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/cms.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13045,
+								13045
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": -0.0,
+						"translation.y": 4698.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "shouldbuy.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 49139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								48932,
+								48932
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 31258.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Moss/Documents/Udemy/jquery.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6000,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3186.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/michaels-countdowntimer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1056,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								515,
+								515
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "jsquiz.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1476.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 677,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								677,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/Moss/Documents/Udacity/Udacity-Front-End-Web-Developer-Nanodegree/Project 2 - My Resume/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1332.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/MAMP/htdocs/Glossary.org.uk/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2805,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								925,
+								925
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/MAMP/htdocs/Glossary.org.uk/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								263,
+								263
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/MAMP/htdocs/Glossary.org.uk/results.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2328,
+								2383
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 28.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
