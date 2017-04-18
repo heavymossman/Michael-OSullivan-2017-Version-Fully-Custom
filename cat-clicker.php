@@ -47,6 +47,11 @@
                       </div>
 
 
+                      <div class="py-1" id="catTestArea" >
+
+                      </div>
+
+
 
 
             </div>  
@@ -193,28 +198,16 @@
 
       console.log(formattedcatName)
 
-    
-
+  
 
       }
 
-
-
-
-       $('#clickme').click(function(e) {
-
-        clicks = clicks + 1;
-
-        console.log(clicks)
-
-       $('#totalClicks').text(clicks);
-
-    });
+    
 
 
     }
 
-    allCats.elemDisplay();
+   // allCats.elemDisplay();
 
   /*  function makeButtonsWork(){
 
@@ -232,7 +225,128 @@
   
     } */
 
+    function forLoopMess(){
 
+      var catId = '';
+
+      var catName = "";
+
+      var catImage = ""; 
+
+      var catArea = "";
+
+      var catAction = "";
+
+      var catClicks = "";
+
+      var hr = "";
+
+      var clicks = 0;
+
+      for (var i=0; i < allCats.kittens.length; i++){
+
+        console.log(allCats.kittens[i])
+
+        catName = catName + allCats.kittens[i].catName;
+
+        catId = '<p class="%dataId% theCats">Cat ID: %data%</p>'
+
+        catName = '<div class="theCats %dataId%"><h3>%data%</h3>'; 
+
+        catArea = '<div class="theCats py-1" id="%dataId%"><img src="%data%" class="img-fluid"></div>';
+
+        catAction = '<h2 class="theCats %dataId%">CLICK THE CAT!</h2>';
+
+        catClicks = '<h2 class="theCats">Total Clicks: <strong><span id="%dataId%">0</span></strong></h2>';
+
+        hr = '<hr>';
+
+        var newCatId = catId.replace('%data%', allCats.kittens[i].catId); 
+        newCatId = newCatId.replace("%dataId%", allCats.kittens[i].catId)
+
+        $('#catTestArea').append(newCatId);
+
+        var newCatName = catName.replace('%data%', allCats.kittens[i].catName); 
+        newCatName = newCatName.replace("%dataId%", allCats.kittens[i].catId)
+    
+        //$('#catTestArea').html("ID " + catId[i] + '<br>' + "Name: " + catName + '<br>' + catImage + '<br>');
+        $('#catTestArea').append(newCatName);
+
+        var clickID = "clickMe-" + allCats.kittens[i].catId
+
+        console.log(clickID)
+
+        var newCatArea = catArea.replace('%data%', allCats.kittens[i].catImage); 
+        newCatArea = newCatArea.replace("%dataId%", clickID)
+
+        var totalClicksID = "totalClicks-" + allCats.kittens[i].catId;
+
+        $('#catTestArea').append(newCatArea);
+
+        $('#catTestArea').append(catAction);
+
+        var newCatClicks = catClicks.replace('%data%', allCats.kittens[i].catId); 
+        newCatClicks = newCatClicks.replace("%dataId%", totalClicksID)
+
+        $('#catTestArea').append(newCatClicks);
+        $('#catTestArea').last().append(hr);
+
+         
+
+      }   
+
+    }
+
+    
+   
+    forLoopMess();
+
+
+
+    function clicker(idGen, ouputGen, i) {
+
+      var idStorage = [];
+
+      var ouputGen = [];
+
+      var clicks = 0;
+
+      for (var i=1; i < allCats.kittens.length +1 ; i++){
+
+        var idGen = '#clickMe-';
+
+        idGen = idGen + i;
+
+        idStorage.push(idGen)
+
+        console.log("idGen = " + idGen)
+
+        ouputGen = '#totalClicks-';
+
+        ouputGen = ouputGen + i
+
+        console.log("ouputGen = " + ouputGen)
+
+          $(idGen).click(function() {
+
+                
+                console.log("WE ARE CLICKING")
+
+                clicks = clicks + 1;
+
+                console.log('You clicked Image: ' + i + 'Total Clicks : ' + clicks)
+
+               $(ouputGen).text(clicks);
+
+          });
+
+
+
+             }
+      }
+
+  clicker();
+  
     
       $( "#Meow" ).click(function() {
 
