@@ -63,8 +63,13 @@
                     <a class="dropdown-item" href="meme.php" id="">Meme Generator</a>
                     <a class="dropdown-item" href="bookmarker.php" id="">JS URL Bookmarking App</a>
                     <a class="dropdown-item" href="planner-app/index.php" id="">Neighbour Hood Planner App</a>
-                     <a class="dropdown-item" href="cat-clicker.php" id="">Cat Clikcer</a>
+                    <a class="dropdown-item" href="cat-clicker-prov4.php" id="">Cat Clikcer Premium PRO</a>
                     <a class="dropdown-item" href="shouldbuy.php" id="">Should I buy this item?</a>
+                    <a class="dropdown-item" href="js-oop.php" id="">JS OOP</a>
+                    <a class="dropdown-item" href="retain.php" id="">Retain</a>
+                    <a class="dropdown-item" href="pizza.php" id="">Pizza</a>
+                    <a class="dropdown-item" href="school-reg.php" id="">School Register App</a>
+                    <a class="dropdown-item" href="practical-js.php" id="">Practical JS Course</a>
 
                   </div>
                 </li>
