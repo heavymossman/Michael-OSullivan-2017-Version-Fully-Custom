@@ -23,6 +23,33 @@
 				<hr />
 				<p><strong>Version 2 - Functions</strong></p>
 				<div id="outputarea2"></div>
+				<hr />
+				<p><strong>Version 3</strong></p>
+				<div id="outputarea3"></div>
+				<hr />
+				<p><strong>Version 4</strong></p>
+				<div id="outputarea4"></div>
+				<hr />
+				<p><strong>Version 5 - </strong></p>
+				<div id="outputarea5"></div>
+				<hr />
+				<p><strong>Version 6 - </strong></p>
+				<div id="outputarea6"></div>
+				<hr />
+				<p><strong>Version 7</strong></p>
+				<div id="outputarea7"></div>
+				<hr />
+				<p><strong>Version 8</strong></p>
+				<div id="outputarea8"></div>
+				<hr />
+				<p><strong>Version 9</strong></p>
+				<div id="outputarea9"></div>
+				<hr />
+				<p><strong>Version 10</strong></p>
+				<div id="outputarea10"></div>
+				<hr />
+
+
 
 			</div>
 		</div>
@@ -86,8 +113,8 @@
 
 	// Display todo list
 	function displayTodos(){
-		$('#outputarea2').html("Displaying via a Function" + todos);
-	}
+		$('#outputarea2').html("My Function Powered todo: " + todos);
+	};
 
 
 	// A new items to list
@@ -95,9 +122,26 @@
 	function addTodos(note){
 		todos.push(note); 
 		displayTodos(); // include this in hte function to reload it after each new item is added
-	}
+	};
 
-	addTodos(' + This is my new note');
+	addTodos(' Item 6 ');
+
+	// Function to change an todo item
+
+	function changeTodo(i, edit) {
+		todos[i] = edit;
+		displayTodos();
+	};
+
+	changeTodo(1, ' Item 7 ');
+
+	// Function to remove an item from the todolist
+
+	function removeTodo(i){
+		todos.splice(i, 1) //1 here means delete one item, so we do not need to make it a paramenter variable, but we could
+	};
+
+	removeTodo(1);
 
 
 	displayTodos();
