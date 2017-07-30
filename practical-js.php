@@ -288,10 +288,15 @@
 
 		displayTodos: function(){
 
-			for (var i = 0; i < this.todos.length; i++){
-
-				$('#outputarea5').html("WORKING " + '<br>' + this.todos[i].todoText);
-				console.log(this.todos[i].todoText)
+			if (this.todos.length === 0){ // to find out if the index of the array is both an integar, and equal to 0
+				console.log("Sorry you have no todo items remaining in your list ");
+				$('#outputarea5').html("My Todos: " + '<br><p>Sorry you have no todo items remaining in your list</p>');
+			} else { // since there are items in the array, lets print them out
+				console.log("My Todos: ");
+				for (var i = 0; i < this.todos.length; i++){
+					$('#outputarea5').html("My Todos: " + '<br><p>' + this.todos[i].todoText + '</p>');
+					console.log(this.todos[i].todoText);
+				}
 			}
 			
 		},
