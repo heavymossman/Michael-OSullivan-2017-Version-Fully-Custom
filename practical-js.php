@@ -24,30 +24,33 @@
 				<p><strong>Version 2 - Functions</strong></p>
 				<div id="outputarea2"></div>
 				<hr />
-				<p><strong>Version 3</strong></p>
+				<p><strong>Version 3 - Objects</strong></p>
+				<div id="outputarea31"></div>
 				<div id="outputarea3"></div>
 				<hr />
-				<p><strong>Version 4</strong></p>
+				<p><strong>Version 4 - Booleans</strong></p>
 				<div id="outputarea4"></div>
 				<hr />
-				<p><strong>Version 5 - </strong></p>
+				<p><strong>Version 5 - Loops of Logic</strong></p>
 				<div id="outputarea5"></div>
 				<hr />
-				<p><strong>Version 6 - </strong></p>
+				<p><strong>Version 6 - Thinking in Code</strong></p>
 				<div id="outputarea6"></div>
 				<hr />
-				<p><strong>Version 7</strong></p>
+				<p><strong>Version 7 - HTML and the DOM</strong></p>
 				<div id="outputarea7"></div>
 				<hr />
-				<p><strong>Version 8</strong></p>
+				<p><strong>Version 8 - Getting data from inputs</strong></p>
 				<div id="outputarea8"></div>
 				<hr />
-				<p><strong>Version 9</strong></p>
+				<p><strong>Version 9 -  Escape from the console</strong></p>
 				<div id="outputarea9"></div>
 				<hr />
-				<p><strong>Version 10</strong></p>
+				<p><strong>Version 10 - Click to delete</strong></p>
 				<div id="outputarea10"></div>
 				<hr />
+				<p><strong>Version 11 - Destroy all for loops</strong></p>
+				<div id="outputarea11"></div>
 
 
 
@@ -153,6 +156,8 @@
 	
 	//VERSION 3
 
+	//This is just testing out the system, ignore. 
+
 	var nameMessage = "Welcome back ";
 
 	var myObject = {
@@ -163,10 +168,54 @@
 		}
 	}
 
+	$('#outputarea31').html(nameMessage + myObject.sayName() + ',');
+
 	//this basically means this object, so any items within THIS object!
 
+	// Version 3 Starts here
 
-	$('#outputarea3').html(nameMessage + myObject.sayName() + ',');
+	var todoList = {
+		
+		todos: [
+			"item 1 ",
+			"item 2 ",
+			"item 3 "
+		],
+
+		displayTodos: function(){
+			$('#outputarea3').html(this.todos);
+		},
+
+		addTodos: function(note){
+			this.todos.push(note);
+		},
+
+		changeTodo: function(i, edit){
+			this.todos[i] = edit;
+		},
+
+		removeTodo: function(i){
+			this.todos.splice(i, 1) //1 here means delete one item, so we do not need to make it a paramenter variable, but we could
+		},
+
+		init: function(){
+			todoList.displayTodos();
+		}
+	};
+
+
+	todoList.changeTodo(1, 'item 7 (new via Change) ');
+
+	todoList.addTodos('item 4 (new via push) ');
+
+	todoList.addTodos('item 5 (to be deleted) ');
+
+	todoList.removeTodo(4); //deletes the 5th item in the array, the one above
+
+	todoList.init();
+
+
+
 
 </script>
 
