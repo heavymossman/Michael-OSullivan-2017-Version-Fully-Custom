@@ -67,7 +67,7 @@
 
 <?php include 'footer-bootstrap.php'; ?>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 
 	// VERSION 1
 
@@ -92,9 +92,9 @@
 
 
 
-</script>
+</script> --?
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 	
 	//VERSION 2
 
@@ -150,9 +150,9 @@
 	displayTodos();
 
 
-</script>
+</script> -->
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 	
 	//VERSION 3
 
@@ -188,14 +188,17 @@
 
 		addTodos: function(note){
 			this.todos.push(note);
+			this.init();
 		},
 
 		changeTodo: function(i, edit){
 			this.todos[i] = edit;
+			this.init();
 		},
 
 		removeTodo: function(i){
 			this.todos.splice(i, 1) //1 here means delete one item, so we do not need to make it a paramenter variable, but we could
+			this.init();
 		},
 
 		init: function(){
@@ -213,6 +216,125 @@
 	todoList.removeTodo(4); //deletes the 5th item in the array, the one above
 
 	todoList.init();
+
+
+
+
+</script> -->
+
+<!--<script type="text/javascript">
+	
+	// VERSION 4
+
+
+	var todoList = {
+		
+		todos: [],
+
+		displayTodos: function(){
+			$('#outputarea4').html("WORKING " + this.todos);
+			console.log(this.todos)
+		},
+
+		addTodos: function(text){
+			this.todos.push({
+				todoText: text,
+				completed: false
+				});
+			this.init();
+		},
+
+		changeTodo: function(i, text){
+			//this.todos[i] = edit;
+			this.todos[i].todoText = text // so here we set the object to todos, dot notion we select the todoText and we set it to the object of this function, which is the text or the change
+			this.init();
+		},
+
+		removeTodo: function(i){
+			this.todos.splice(i, 1) //1 here means delete one item, so we do not need to make it a paramenter variable, but we could
+			this.init();
+		},
+
+		toggleCompleted: function(i){	
+			var todo = this.todos[i]; //setting this as a variable saves us reuseing the long verson below twice. 
+			todo.completed = !todo.completed; //! means the opposite, so if its starts as true, will turn it false, and vice versa
+			this.init();
+		},
+
+		init: function(){
+			todoList.displayTodos();
+		}
+	};
+
+	todoList.addTodos('item 4 (new via push) ');
+
+	todoList.toggleCompleted(0);
+
+	todoList.init();
+
+	
+
+
+</script> -->
+
+<script type="text/javascript">
+	
+	//Version 5 - LOOOPS of LOGIC
+
+
+	var todoList = {
+		
+		todos: [],
+
+		displayTodos: function(){
+
+			for (var i = 0; i < this.todos.length; i++){
+
+				$('#outputarea5').html("WORKING " + '<br>' + this.todos[i].todoText);
+				console.log(this.todos[i].todoText)
+			}
+			
+		},
+
+		addTodos: function(text){
+			this.todos.push({
+				todoText: text,
+				completed: false
+				});
+			this.init();
+		},
+
+		changeTodo: function(i, text){
+			//this.todos[i] = edit;
+			this.todos[i].todoText = text // so here we set the object to todos, dot notion we select the todoText and we set it to the object of this function, which is the text or the change
+			this.init();
+		},
+
+		removeTodo: function(i){
+			this.todos.splice(i, 1) //1 here means delete one item, so we do not need to make it a paramenter variable, but we could
+			this.init();
+		},
+
+		toggleCompleted: function(i){	
+			var todo = this.todos[i]; //setting this as a variable saves us reuseing the long verson below twice. 
+			todo.completed = !todo.completed; //! means the opposite, so if its starts as true, will turn it false, and vice versa
+			this.init();
+		},
+
+		init: function(){
+			todoList.displayTodos();
+		}
+	};
+
+	todoList.addTodos('item 4 (new via push) ');
+	todoList.addTodos('Michael is so sexy ');
+
+	todoList.toggleCompleted(0);
+
+	todoList.init();
+
+
+
 
 
 
