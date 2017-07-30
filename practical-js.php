@@ -147,9 +147,26 @@
 	displayTodos();
 
 
+</script>
+
+<script type="text/javascript">
+	
+	//VERSION 3
+
+	var nameMessage = "Welcome back ";
+
+	var myObject = {
+
+		name: 'Michael',
+		sayName: function(){ //this is a method, and object that is equal to a function is a method
+			return this.name;
+		}
+	}
+
+	//this basically means this object, so any items within THIS object!
 
 
-
+	$('#outputarea3').html(nameMessage + myObject.sayName() + ',');
 
 </script>
 
