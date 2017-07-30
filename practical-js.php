@@ -294,8 +294,14 @@
 			} else { // since there are items in the array, lets print them out
 				console.log("My Todos: ");
 				for (var i = 0; i < this.todos.length; i++){
-					$('#outputarea5').html("My Todos: " + '<br><p>' + this.todos[i].todoText + '</p>');
-					console.log(this.todos[i].todoText);
+					// Here we are checking IF the completed status of the todo is true or false, set to false by default on the todo objects
+					if (this.todos[i].completed === true){
+						console.log('(X) ' + this.todos[i].todoText);
+						$('#outputarea5').html("My Todos: " + '<br><p>(X) ' + this.todos[i].todoText + '</p>');
+					} else {
+						console.log('( ) ' + this.todos[i].todoText);
+						$('#outputarea5').html("My Todos: " + '<br><p>( ) ' + this.todos[i].todoText + '</p>');
+					}				
 				}
 			}
 			
@@ -334,7 +340,7 @@
 	todoList.addTodos('item 4 (new via push) ');
 	todoList.addTodos('Michael is so sexy ');
 
-	todoList.toggleCompleted(0);
+	todoList.toggleCompleted(1);
 
 	todoList.init();
 
