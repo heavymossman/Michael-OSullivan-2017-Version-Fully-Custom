@@ -45,16 +45,37 @@
 				<p><strong>Version 8 - Getting data from inputs</strong></p>
 				<button class="btn btn-lg btn-success" onclick="handlers.displayTodos()">Display todos</button>
 				<button class="btn btn-lg btn-warning" onclick="handlers.toggleAll()">Toggle All</button>
-				<p class="py-1">Add your Todo</p>
-				<div class="row">
+				
+				<div class="row mt-1">
+					<div class="col-md-12"><label>Add your Todo</label></div>
 					<div class="col-md-10">
+						
 						<input type="text" name="" class="form-control" placeholder="Enter your todo item here" id="enterTodo">
 					</div>
 					<div class="col-md-2">
 						<button class="btn btn-default btn-block" id="btn-enterTodo">SAVE</button>
 					</div>
 				</div>
-				<div id="outputarea8"></div>
+				<div class="row py-2 mt-1">
+					<div class="col-md-4">
+						<input type="text" name="" class="form-control" placeholder="Enter new todo text" id="changeTodoText">
+					</div>
+					<div class="col-md-4">
+						<input type="number" name="" class="form-control" placeholder="Which number todo would you like to change?" id="changeTodoPosition">
+					</div>
+					<div class="col-md-4">
+						<button class="btn btn-info btn-block" onclick="handlers.changeTodo()">Change Todo</button>
+					</div>
+				</div>
+				<div class="row mt-1">
+					<div class="col-md-6">
+						<input type="number" name="" class="form-control" placeholder="Which number todo would you like to delete?" id="deleteTodoPosition">
+					</div>
+					<div class="col-md-6">
+						<button class="btn btn-warning btn-block" onclick="handlers.deleteTodo()">Delete Todo</button>
+					</div>
+				</div>
+				<div id="outputarea8" class="mt-2"></div>
 				<hr />
 				<p><strong>Version 9 -  Escape from the console</strong></p>
 				<div id="outputarea9"></div>
@@ -602,10 +623,10 @@
 					for (var i = 0; i < this.todos.length; i++){
 						// Here we are checking IF the completed status of the todo is true or false, set to false by default on the todo objects
 						if (this.todos[i].completed === true){
-							console.log('(X) ' + this.todos[i].todoText + "completed status: " + this.todos[i].completed);
+							console.log('(X) ' + this.todos[i].todoText + " completed status: " + this.todos[i].completed);
 							$('#outputarea8').html("My Todos: " + '<br><p>(X) ' + this.todos[i].todoText + '</p>');
 						} else {
-							console.log('( ) ' + this.todos[i].todoText + "completed status: " + this.todos[i].completed);
+							console.log('( ) ' + this.todos[i].todoText + " completed status: " + this.todos[i].completed);
 							$('#outputarea8').html("My Todos: " + '<br><p>( ) ' + this.todos[i].todoText + '</p>');
 						}				
 					}
@@ -671,9 +692,9 @@
 
 		};
 
-		//todoList.addTodos('item 4 (new via push) ');
-		//todoList.addTodos('item 5 ');
-		//todoList.addTodos('item 6 ');
+		todoList.addTodos('item 4 (new via push) ');
+		todoList.addTodos('item 5 ');
+		todoList.addTodos('item 6 ');
 
 		//todoList.toggleCompleted(0);
 		//todoList.toggleCompleted(1);
@@ -696,12 +717,26 @@
 			
 			var btnEnterTodo = $('#btn-enterTodo');
 
-			btnEnterTodo.click(function() { //onclick we acitivate the toggleAll function
-				var todoTextInput = document.getElementById('enterTodo').value;
-			    todoList.addTodos(todoTextInput);
+			btnEnterTodo.click(function() {
+				var todoTextInput = document.getElementById('enterTodo');
+			    todoList.addTodos(todoTextInput.value); //we can actually take the value from here, OR from the line above
+			    todoTextInput.value = ''; //This is awesome, it clears the input after you have entereed your todo
 			});
 
 			
+		},
+
+		changeTodo: function(){
+			var newTodoText = document.getElementById('changeTodoText');
+			var changeTodoPosition = document.getElementById('changeTodoPosition');
+			todoList.changeTodo(changeTodoPosition.value, newTodoText.value);
+			newTodoText.value = '';
+			changeTodoPosition.value = '';
+		},
+		deleteTodo: function(){
+			var deleteTodoPosition = document.getElementById('deleteTodoPosition');
+			todoList.removeTodo(deleteTodoPosition.value);
+			deleteTodoPosition.value = '';
 		}
 	};
 
