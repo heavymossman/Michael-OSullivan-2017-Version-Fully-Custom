@@ -75,6 +75,14 @@
 						<button class="btn btn-warning btn-block" onclick="handlers.deleteTodo()">Delete Todo</button>
 					</div>
 				</div>
+				<div class="row mt-1">
+					<div class="col-md-6">
+						<input type="number" name="" class="form-control" placeholder="Which number todo would you like to Mark Completed?" id="toggleTodoPosition">
+					</div>
+					<div class="col-md-6">
+						<button class="btn btn-default btn-block" onclick="handlers.toggleTodo()">Mark as completed / uncompleted</button>
+					</div>
+				</div>
 				<div id="outputarea8" class="mt-2"></div>
 				<hr />
 				<p><strong>Version 9 -  Escape from the console</strong></p>
@@ -723,7 +731,6 @@
 			    todoTextInput.value = ''; //This is awesome, it clears the input after you have entereed your todo
 			});
 
-			
 		},
 
 		changeTodo: function(){
@@ -735,10 +742,17 @@
 		},
 		deleteTodo: function(){
 			var deleteTodoPosition = document.getElementById('deleteTodoPosition');
-			todoList.removeTodo(deleteTodoPosition.value);
+			todoList.removeTodo(deleteTodoPosition.valueAsNumber);
 			deleteTodoPosition.value = '';
-		}
-	};
+		},
+
+		toggleTodo: function(){
+			var toggleTodoPosition = document.getElementById('toggleTodoPosition');
+			todoList.toggleCompleted(toggleTodoPosition.valueAsNumber);
+			toggleTodoPosition.value = '';
+		},
+
+	};	
 
 	todoList.init();
 	handlers.addTodoText();
