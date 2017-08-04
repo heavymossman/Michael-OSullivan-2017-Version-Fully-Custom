@@ -729,7 +729,7 @@
 		changeTodo: function(){
 			var newTodoText = document.getElementById('changeTodoText');
 			var changeTodoPosition = document.getElementById('changeTodoPosition');
-			todoList.changeTodo(changeTodoPosition.value, newTodoText.value);
+			todoList.changeTodo(changeTodoPosition.valueAsNumber, newTodoText.value); //.value takes the item as a sring, valueAsNumber take it as an integar or number
 			newTodoText.value = '';
 			changeTodoPosition.value = '';
 		},
