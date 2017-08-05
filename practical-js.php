@@ -40,10 +40,10 @@
 				<p><strong>Version 7 - HTML and the DOM</strong></p>
 				<!--<button class="btn btn-lg btn-success" id="btn-displayTodos">Display todos</button>
 				<button class="btn btn-lg btn-warning" id="btn-toggleAll">Toggle All</button> -->
-				<div id="outputarea7"></div>
+				
 				<hr />
 				<p><strong>Version 8 - Getting data from inputs</strong></p>
-				<button class="btn btn-lg btn-success" onclick="handlers.displayTodos()">Display todos</button>
+				<!--<button class="btn btn-lg btn-success" onclick="handlers.displayTodos()">Display todos</button>-->
 				<button class="btn btn-lg btn-warning" onclick="handlers.toggleAll()">Toggle All</button>
 				
 				<div class="row mt-1">
@@ -69,10 +69,10 @@
 				</div>
 				<div class="row mt-1">
 					<div class="col-md-6">
-						<input type="number" name="" class="form-control" placeholder="Which number todo would you like to delete?" id="deleteTodoPosition">
+						<!--<input type="number" name="" class="form-control" placeholder="Which number todo would you like to delete?" id="deleteTodoPosition"> -->
 					</div>
 					<div class="col-md-6">
-						<button class="btn btn-warning btn-block" onclick="handlers.deleteTodo()">Delete Todo</button>
+						<!--<button class="btn btn-warning btn-block" onclick="handlers.deleteTodo()">Delete Todo</button>-->
 					</div>
 				</div>
 				<div class="row mt-1">
@@ -83,17 +83,12 @@
 						<button class="btn btn-default btn-block" onclick="handlers.toggleTodo()">Mark as completed / uncompleted</button>
 					</div>
 				</div>
-				<div id="outputarea8" class="mt-2"></div>
 				<hr />
-				<p><strong>Version 9 -  Escape from the console</strong></p>
-				<div id="outputarea9"></div>
-				<hr />
-				<p><strong>Version 10 - Click to delete</strong></p>
-				<div id="outputarea10"></div>
-				<hr />
-				<p><strong>Version 11 - Destroy all for loops</strong></p>
-				<div id="outputarea11"></div>
-
+				<div id="outputarea8">
+					<ul id="todoTaskList">
+						
+					</ul>
+				</div>
 
 
 			</div>
@@ -612,7 +607,7 @@
 
 <script type="text/javascript">
 
-	//Version 8 - Getting data from inputs
+	//Version 8, 9, 10, 11 - Getting data from inputs
 	
 
 		
@@ -621,51 +616,30 @@
 			
 			todos: [],
 
-			displayTodos: function(){
-				//debugger; //very cool way to test your code in console.log
-				if (this.todos.length === 0){ // to find out if the index of the array is both an integar, and equal to 0
-					console.log("Sorry you have no todo items remaining in your list ");
-					$('#outputarea8').html("My Todos: " + '<br><p>Sorry you have no todo items remaining in your list</p>');
-				} else { // since there are items in the array, lets print them out
-					console.log("My Todos: ");
-					for (var i = 0; i < this.todos.length; i++){
-						// Here we are checking IF the completed status of the todo is true or false, set to false by default on the todo objects
-						if (this.todos[i].completed === true){
-							console.log('(X) ' + this.todos[i].todoText + " completed status: " + this.todos[i].completed);
-							$('#outputarea8').html("My Todos: " + '<br><p>(X) ' + this.todos[i].todoText + '</p>');
-						} else {
-							console.log('( ) ' + this.todos[i].todoText + " completed status: " + this.todos[i].completed);
-							$('#outputarea8').html("My Todos: " + '<br><p>( ) ' + this.todos[i].todoText + '</p>');
-						}				
-					}
-				}
-				
-			},
-
 			addTodos: function(text){
 				//debugger;
 				this.todos.push({
 					todoText: text,
 					completed: false
 					});
-				this.init();
+				//this.init();
 			},
 
 			changeTodo: function(i, text){
 				//this.todos[i] = edit;
 				this.todos[i].todoText = text // so here we set the object to todos, dot notion we select the todoText and we set it to the object of this function, which is the text or the change
-				this.init();
+				//this.init();
 			},
 
 			removeTodo: function(i){
 				this.todos.splice(i, 1) //1 here means delete one item, so we do not need to make it a paramenter variable, but we could
-				this.init();
+				//this.init();
 			},
 
 			toggleCompleted: function(i){	
 				var todo = this.todos[i]; //setting this as a variable saves us reuseing the long verson below twice. 
 				todo.completed = !todo.completed; //! means the opposite, so if its starts as true, will turn it false, and vice versa
-				this.init();
+				//this.init();
 			},
 
 			toggleAll: function(){
@@ -682,8 +656,7 @@
 
 				if (completedTodos === totalTodos){ //If the totalTodos matches the total number of completed todos, we know they are all set to true, i.e completed
 					for (var i = 0; i < totalTodos; i++){ //this for loop goes over each item and sets its completed booleon to false,
-						this.todos[i].completed = false;
-						
+						this.todos[i].completed = false;						
 					}
 				} else {
 					for (var i = 0; i < totalTodos; i++){
@@ -691,34 +664,22 @@
 					}
 				}
 				
-				this.init();
+				//this.init();
 			},
 
 			init: function(){
 				todoList.displayTodos();
+
 			},
 
 		};
 
-		todoList.addTodos('item 4 (new via push) ');
-		todoList.addTodos('item 5 ');
-		todoList.addTodos('item 6 ');
-
-		//todoList.toggleCompleted(0);
-		//todoList.toggleCompleted(1);
-		//todoList.toggleCompleted(2);
-
-		todoList.init();
-
-
-	var handlers = {
 		
-		displayTodos: function(){
-			todoList.init();
-		}, 
+	var handlers = { 
 
 		toggleAll: function(){
 			todoList.toggleAll();
+			view.displayTodos();
 		},
 
 		addTodoText: function(){
@@ -729,6 +690,7 @@
 				var todoTextInput = document.getElementById('enterTodo');
 			    todoList.addTodos(todoTextInput.value); //we can actually take the value from here, OR from the line above
 			    todoTextInput.value = ''; //This is awesome, it clears the input after you have entereed your todo
+			    view.displayTodos();
 			});
 
 		},
@@ -739,23 +701,123 @@
 			todoList.changeTodo(changeTodoPosition.valueAsNumber, newTodoText.value); //.value takes the item as a sring, valueAsNumber take it as an integar or number
 			newTodoText.value = '';
 			changeTodoPosition.value = '';
+			view.displayTodos();
 		},
-		deleteTodo: function(){
-			var deleteTodoPosition = document.getElementById('deleteTodoPosition');
-			todoList.removeTodo(deleteTodoPosition.valueAsNumber);
-			deleteTodoPosition.value = '';
+
+		deleteTodo: function(arrayPosition){
+			todoList.removeTodo(arrayPosition);
+			view.displayTodos();
 		},
 
 		toggleTodo: function(){
 			var toggleTodoPosition = document.getElementById('toggleTodoPosition');
 			todoList.toggleCompleted(toggleTodoPosition.valueAsNumber);
 			toggleTodoPosition.value = '';
+			view.displayTodos();
+		}
+
+	};
+
+	var view = {
+		displayTodos: function(){
+
+			var todosUl = document.getElementById('todoTaskList');
+			todosUl.innerHTML = ''; //set this blank before the loop starts so it always taking a fresh set of data and not doubling up
+
+			for (var i = 0; i < todoList.todos.length; i++){
+					var todoLi = document.createElement('li'); //so whenever this variable is called, it will create a <li></li>
+					var todo = todoList.todos[i];
+					var todoTextWithCompletion = '';
+
+					if (todo.completed === true){
+						todoTextWithCompletion = '(X) ' + todo.todoText + ' ';
+					} else {
+						todoTextWithCompletion = '( ) ' + todo.todoText + ' ';
+					};
+
+					todoLi.id = i; //THIS IS AWESOME - it just sets the todoLi ID to the index of the array
+					todoLi.textContent = todoTextWithCompletion; //you use textContent to set the value of a created element
+					todoLi.appendChild(this.createDeleteBtn()); //this adds the button elemnts as a child of the list element, the this refers to this object.
+					todosUl.appendChild(todoLi); //adds the LI children to the parent UL
+			} 	
+
 		},
 
-	};	
+		createDeleteBtn: function(){
+			var deleteBtn = document.createElement('button'); //creates a new button each time variable deleteBtn is called
+			deleteBtn.innerHTML = '<i class="fa fa-trash-o" aria-hidden="true"></i>'; //Using inner HTML here to add in the font awesome icone of the delete button
+			deleteBtn.className = 'deleteButton btn my-1'; //adding the class deleteButton and btn to all delete buttons
+			return deleteBtn;
+		},
 
-	todoList.init();
+		setUpEventListeners: function(){
+			var todosUl = document.getElementById('todoTaskList');
+
+			todosUl.addEventListener('click', function(e){
+				console.log(e.target.parentNode.id); //this allows us to access the parent node of the button, which is the LI element, and then view the ID - e could be anything
+
+				var elementClicked = e.target; // so e is just the parameter we set in the function above, and target just gets the actually item clicked
+
+				if (elementClicked.className === 'deleteButton btn my-1'){
+					handlers.deleteTodo(parseInt(elementClicked.parentNode.id)); //So this line is running the handlers.deleteTodo function and passing in the array position as the variable, so the delete button knows which array item to delete. The parentNocde of the button is the li and we are taking this id to delete the right item - parseInt just turns strings into numbers as our arrayPosition is a number
+				}
+			});
+		}
+	};
+
+	
+
+
+	view.displayTodos();
 	handlers.addTodoText();
+	view.setUpEventListeners();
+
+	// FUNCTIONS THAT TAKE FUNCTIONS - NOT PART OF THE TODO APP PROJECT!!!
+
+	//THE RUN WITH DEBUGGER FUNCTION
+
+	function runWithDebugger(ourFunction) {
+		debugger;
+		ourFunction()
+	}
+
+	//Set Timeout notes - The Alarm Clock
+
+
+	/*function alarmClock() {
+		setTimeout(function(){
+			console.log("WAKE BLOODY UP");
+		}, 4000);
+	}
+
+	alarmClock(); */
+
+	// Learning the FOR EACH LOOPS TO REPLACE FOR LOOPS
+
+	var students = ['Michael', 'Nikki', 'JerryMan'];
+
+	function logName(anything){
+		console.log(anything);
+	};
+
+	students.forEach(logName); //once you pass in a function it will run the function on each item in the array - ForEach is a function built onto Arrays in JS
+
+	// ACCESS $0 from console to see the section you have selected via the ELements tab
+
+	var h1Listener = document.querySelector('h1'); //listens for any h1 HTML elements and sets them to the variable
+
+	h1Listener.addEventListener('click', function(){
+		console.log('The H1 Elements Have Been Clicked BITCHES!')
+	}); //using our H! variable we listen for clicks, and then console log the message per h1 click
+
+	// Using the Return Statement
+
+	function calculator(x,y){
+		var answer = x * y; 
+		return answer;
+	};
+
+	console.log(calculator(2,10));
 
 
 </script>
