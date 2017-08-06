@@ -75,14 +75,14 @@
 						<!--<button class="btn btn-warning btn-block" onclick="handlers.deleteTodo()">Delete Todo</button>-->
 					</div>
 				</div>
-				<div class="row mt-1">
+				<!--<div class="row mt-1">
 					<div class="col-md-6">
 						<input type="number" name="" class="form-control" placeholder="Which number todo would you like to Mark Completed?" id="toggleTodoPosition">
 					</div>
 					<div class="col-md-6">
 						<button class="btn btn-default btn-block" onclick="handlers.toggleTodo()">Mark as completed / uncompleted</button>
 					</div>
-				</div>
+				</div>-->
 				<hr />
 				<div id="outputarea8">
 					<ul id="todoTaskList">
@@ -962,10 +962,8 @@
 			view.displayTodos();
 		},
 
-		toggleTodo: function(){
-			var toggleTodoPosition = document.getElementById('toggleTodoPosition');
-			todoList.toggleCompleted(toggleTodoPosition.valueAsNumber);
-			toggleTodoPosition.value = '';
+		toggleTodo: function(arrayPosition){
+			todoList.toggleCompleted(arrayPosition);
 			view.displayTodos();
 		}
 
@@ -991,7 +989,7 @@
 					todoLi.textContent = todoTextWithCompletion; //you use textContent to set the value of a created element
 					todoLi.appendChild(this.createDeleteBtn()); //this adds the button elemnts as a child of the list element, the this refers to this object.
 					todoLi.appendChild(this.createEditBtn());
-					if (todo.completed === false) {todoLi.appendChild(this.createDoneBtn());}
+					if (todo.completed === false) {todoLi.appendChild(this.createDoneBtn());} else {todoLi.appendChild(this.createNotDoneBtn());};
 					todosUl.appendChild(todoLi); //adds the LI children to the parent UL
 			},this); //the THIS above todoLi.appendChild(this.createDeleteBtn()); would not refer to the correct object, it would be the parent, so we add this as below and then it links them together in some magical way
 
@@ -1034,20 +1032,34 @@
 		createDoneBtn: function(){
 			var doneBtn = document.createElement('button'); //creates a new button each time variable deleteBtn is called
 			doneBtn.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>'; //Using inner HTML here to add in the font awesome icone of the delete button
-			doneBtn.className = 'doneButton btn btn-warning'; //adding the class deleteButton and btn to all delete buttons
+			doneBtn.className = 'doneButton btn btn-success'; //adding the class deleteButton and btn to all delete buttons
 			return doneBtn;
+		},
+
+		createNotDoneBtn: function(){
+			var notDoneBtn = document.createElement('button'); //creates a new button each time variable deleteBtn is called
+			notDoneBtn.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'; //Using inner HTML here to add in the font awesome icone of the delete button
+			notDoneBtn.className = 'notDoneBtn btn btn-warning'; //adding the class deleteButton and btn to all delete buttons
+			return notDoneBtn;
 		},
 
 		setUpEventListeners: function(){
 			var todosUl = document.getElementById('todoTaskList');
 
 			todosUl.addEventListener('click', function(e){
-				console.log(e.target.parentNode.id); //this allows us to access the parent node of the button, which is the LI element, and then view the ID - e could be anything
+				//console.log(e.target.parentNode.id); //this allows us to access the parent node of the button, which is the LI element, and then view the ID - e could be anything
 
 				var elementClicked = e.target; // so e is just the parameter we set in the function above, and target just gets the actually item clicked
 
 				if (elementClicked.className === 'deleteButton btn my-1'){
 					handlers.deleteTodo(parseInt(elementClicked.parentNode.id)); //So this line is running the handlers.deleteTodo function and passing in the array position as the variable, so the delete button knows which array item to delete. The parentNocde of the button is the li and we are taking this id to delete the right item - parseInt just turns strings into numbers as our arrayPosition is a number
+
+				};
+
+				if (elementClicked.className === 'doneButton btn btn-success'){
+					handlers.toggleTodo(parseInt(elementClicked.parentNode.id));
+				} else if (elementClicked.className === 'notDoneBtn btn btn-warning'){
+					handlers.toggleTodo(parseInt(elementClicked.parentNode.id));
 				}
 			});
 		}
