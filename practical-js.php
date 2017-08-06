@@ -605,7 +605,7 @@
 	})//Final master closure
 </script> -->
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 
 	//Version 8, 9, 10, 11 - Getting data from inputs
 	
@@ -748,6 +748,294 @@
 			deleteBtn.innerHTML = '<i class="fa fa-trash-o" aria-hidden="true"></i>'; //Using inner HTML here to add in the font awesome icone of the delete button
 			deleteBtn.className = 'deleteButton btn my-1'; //adding the class deleteButton and btn to all delete buttons
 			return deleteBtn;
+		},
+
+		setUpEventListeners: function(){
+			var todosUl = document.getElementById('todoTaskList');
+
+			todosUl.addEventListener('click', function(e){
+				console.log(e.target.parentNode.id); //this allows us to access the parent node of the button, which is the LI element, and then view the ID - e could be anything
+
+				var elementClicked = e.target; // so e is just the parameter we set in the function above, and target just gets the actually item clicked
+
+				if (elementClicked.className === 'deleteButton btn my-1'){
+					handlers.deleteTodo(parseInt(elementClicked.parentNode.id)); //So this line is running the handlers.deleteTodo function and passing in the array position as the variable, so the delete button knows which array item to delete. The parentNocde of the button is the li and we are taking this id to delete the right item - parseInt just turns strings into numbers as our arrayPosition is a number
+				}
+			});
+		}
+	};
+
+	
+
+
+	view.displayTodos();
+	handlers.addTodoText();
+	view.setUpEventListeners();
+
+	// FUNCTIONS THAT TAKE FUNCTIONS - NOT PART OF THE TODO APP PROJECT!!!
+
+	//THE RUN WITH DEBUGGER FUNCTION
+
+	function runWithDebugger(ourFunction) {
+		debugger;
+		ourFunction()
+	}
+
+	//Set Timeout notes - The Alarm Clock
+
+
+	/*function alarmClock() {
+		setTimeout(function(){
+			console.log("WAKE BLOODY UP");
+		}, 4000);
+	}
+
+	alarmClock(); */
+
+	// Learning the FOR EACH LOOPS TO REPLACE FOR LOOPS
+
+	var students = ['Michael', 'Nikki', 'JerryMan'];
+
+	function logName(anything){
+		console.log(anything);
+	};
+
+	students.forEach(logName); //once you pass in a function it will run the function on each item in the array - ForEach is a function built onto Arrays in JS
+
+	// ACCESS $0 from console to see the section you have selected via the ELements tab
+
+	var h1Listener = document.querySelector('h1'); //listens for any h1 HTML elements and sets them to the variable
+
+	h1Listener.addEventListener('click', function(){
+		console.log('The H1 Elements Have Been Clicked BITCHES!')
+	}); //using our H! variable we listen for clicks, and then console log the message per h1 click
+
+	// Using the Return Statement
+
+	function calculator(x,y){
+		var answer = x * y; 
+		return answer;
+	};
+
+	console.log(calculator(2,10));
+
+
+</script> -->
+
+<script type="text/javascript">
+
+	//11 - DEATH TO ALL FOR LOOPS VERSION - FINAL
+	
+
+		
+
+		var todoList = {
+			
+			todos: [],
+
+			addTodos: function(text){
+				//debugger;
+				this.todos.push({
+					todoText: text,
+					completed: false
+					});
+				//this.init();
+			},
+
+			changeTodo: function(i, text){
+				//this.todos[i] = edit;
+				this.todos[i].todoText = text // so here we set the object to todos, dot notion we select the todoText and we set it to the object of this function, which is the text or the change
+				//this.init();
+			},
+
+			removeTodo: function(i){
+				this.todos.splice(i, 1) //1 here means delete one item, so we do not need to make it a paramenter variable, but we could
+				//this.init();
+			},
+
+			toggleCompleted: function(i){	
+				var todo = this.todos[i]; //setting this as a variable saves us reuseing the long verson below twice. 
+				todo.completed = !todo.completed; //! means the opposite, so if its starts as true, will turn it false, and vice versa
+				//this.init();
+			},
+
+			toggleAll: function(){
+				var totalTodos = this.todos.length; //this gives us the total number of todos in the array
+				var completedTodos = 0;
+
+				//Get total number of COMPLETED todos from the todo array
+
+				/*for (var i = 0; i < totalTodos; i++) {
+					if (this.todos[i].completed === true) {
+						completedTodos++;
+					}
+				}; */
+
+
+				//Updated to a For Each Loop
+
+				this.todos.forEach(function(i){
+					if (i.completed === true) {
+						completedTodos++;
+					}
+				});
+
+
+				//This was too repetitive, so we are commenting for the below
+
+				/*
+
+				if (completedTodos === totalTodos){
+					this.todos.forEach(function(i){
+						i.completed = false;
+					})
+				} else {
+					this.todos.forEach(function(i){
+						i.completed = true;
+					})
+				}
+
+				*/
+
+				this.todos.forEach(function(i){
+					if (completedTodos === totalTodos){
+						i.completed = false;
+					} else {
+						i.completed = true;
+					}
+				});
+
+
+				/*
+				if (completedTodos === totalTodos){ //If the totalTodos matches the total number of completed todos, we know they are all set to true, i.e completed
+					for (var i = 0; i < totalTodos; i++){ //this for loop goes over each item and sets its completed booleon to false,
+						this.todos[i].completed = false;						
+					}
+				} else {
+					for (var i = 0; i < totalTodos; i++){
+						this.todos[i].completed = true; //so the previous was if all is true, set to false, this then sets them all to true. if there is any other condition than all set to ture
+					}
+				} */
+				
+				//this.init();
+			},
+
+			init: function(){
+				todoList.displayTodos();
+
+			},
+
+		};
+
+		
+	var handlers = { 
+
+		toggleAll: function(){
+			todoList.toggleAll();
+			view.displayTodos();
+		},
+
+		addTodoText: function(){
+			
+			var btnEnterTodo = $('#btn-enterTodo');
+
+			btnEnterTodo.click(function() {
+				var todoTextInput = document.getElementById('enterTodo');
+			    todoList.addTodos(todoTextInput.value); //we can actually take the value from here, OR from the line above
+			    todoTextInput.value = ''; //This is awesome, it clears the input after you have entereed your todo
+			    view.displayTodos();
+			});
+
+		},
+
+		changeTodo: function(){
+			var newTodoText = document.getElementById('changeTodoText');
+			var changeTodoPosition = document.getElementById('changeTodoPosition');
+			todoList.changeTodo(changeTodoPosition.valueAsNumber, newTodoText.value); //.value takes the item as a sring, valueAsNumber take it as an integar or number
+			newTodoText.value = '';
+			changeTodoPosition.value = '';
+			view.displayTodos();
+		},
+
+		deleteTodo: function(arrayPosition){
+			todoList.removeTodo(arrayPosition);
+			view.displayTodos();
+		},
+
+		toggleTodo: function(){
+			var toggleTodoPosition = document.getElementById('toggleTodoPosition');
+			todoList.toggleCompleted(toggleTodoPosition.valueAsNumber);
+			toggleTodoPosition.value = '';
+			view.displayTodos();
+		}
+
+	};
+
+	var view = {
+		displayTodos: function(){
+
+			var todosUl = document.getElementById('todoTaskList');
+			todosUl.innerHTML = ''; //set this blank before the loop starts so it always taking a fresh set of data and not doubling up
+			
+			todoList.todos.forEach(function(todo, position){ //in a for each the position is the array position number or the i in a for loop
+					var todoLi = document.createElement('li'); //so whenever this variable is called, it will create a <li></li>
+					var todoTextWithCompletion = '';
+
+					if (todo.completed === true){
+						todoTextWithCompletion = '(X) ' + todo.todoText + ' ';
+					} else {
+						todoTextWithCompletion = '( ) ' + todo.todoText + ' ';
+					};
+
+					todoLi.id = position; //THIS IS AWESOME - it just sets the todoLi ID to the index of the array
+					todoLi.textContent = todoTextWithCompletion; //you use textContent to set the value of a created element
+					todoLi.appendChild(this.createDeleteBtn()); //this adds the button elemnts as a child of the list element, the this refers to this object.
+					todoLi.appendChild(this.createEditBtn());
+					if (todo.completed === false) {todoLi.appendChild(this.createDoneBtn());}
+					todosUl.appendChild(todoLi); //adds the LI children to the parent UL
+			},this); //the THIS above todoLi.appendChild(this.createDeleteBtn()); would not refer to the correct object, it would be the parent, so we add this as below and then it links them together in some magical way
+
+			/* The below loop is being replaced by the for each above
+
+			for (var i = 0; i < todoList.todos.length; i++){
+					var todoLi = document.createElement('li'); //so whenever this variable is called, it will create a <li></li>
+					var todo = todoList.todos[i];
+					var todoTextWithCompletion = '';
+
+					if (todo.completed === true){
+						todoTextWithCompletion = '(X) ' + todo.todoText + ' ';
+					} else {
+						todoTextWithCompletion = '( ) ' + todo.todoText + ' ';
+					};
+
+					todoLi.id = i; //THIS IS AWESOME - it just sets the todoLi ID to the index of the array
+					todoLi.textContent = todoTextWithCompletion; //you use textContent to set the value of a created element
+					todoLi.appendChild(this.createDeleteBtn()); //this adds the button elemnts as a child of the list element, the this refers to this object.
+					todosUl.appendChild(todoLi); //adds the LI children to the parent UL
+			}
+			*/ 	
+
+		},
+
+		createDeleteBtn: function(){
+			var deleteBtn = document.createElement('button'); //creates a new button each time variable deleteBtn is called
+			deleteBtn.innerHTML = '<i class="fa fa-trash-o" aria-hidden="true"></i>'; //Using inner HTML here to add in the font awesome icone of the delete button
+			deleteBtn.className = 'deleteButton btn my-1'; //adding the class deleteButton and btn to all delete buttons
+			return deleteBtn;
+		},
+
+		createEditBtn: function(){
+			var editBtn = document.createElement('button'); //creates a new button each time variable deleteBtn is called
+			editBtn.innerHTML = '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'; //Using inner HTML here to add in the font awesome icone of the delete button
+			editBtn.className = 'editButton btn btn-info mx-1'; //adding the class deleteButton and btn to all delete buttons
+			return editBtn;
+		},
+
+		createDoneBtn: function(){
+			var doneBtn = document.createElement('button'); //creates a new button each time variable deleteBtn is called
+			doneBtn.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>'; //Using inner HTML here to add in the font awesome icone of the delete button
+			doneBtn.className = 'doneButton btn btn-warning'; //adding the class deleteButton and btn to all delete buttons
+			return doneBtn;
 		},
 
 		setUpEventListeners: function(){
