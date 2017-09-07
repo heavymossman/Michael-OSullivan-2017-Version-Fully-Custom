@@ -60,6 +60,9 @@
 
 								<div class="col-md-12">
 
+								<p>TEMP OUTPUTAREA:</p>
+								<p id="tempArea"></p>
+
 								<table class="table">
 									
 									<thead>
@@ -102,15 +105,18 @@
 	
 //SCRIPT GOES HERE
 
-	// Add a new student CONSTRUCTOR
-	function Student(name, week1, week2){
-		this.name = name;
-		this.week1 = week1;
-		this.week2 = week2;
-	};
 
-	var dave = new Student("Kevin", 5, 5);
-	var deleteMe = new Student("DICKHEAD", 0, 0);
+	//FEATURES WE NEED
+
+	// Add New Student
+	// Delete Student
+	// Edit Student Name
+	// Enter Week 1 Attendance
+	// Enter Week 2 Attendance
+	// Calculate each students missed days
+	// Calculate total amount of students and the class average attendance
+	// Save via HTML 5 local.storage
+	// BONUS: Set total amount of weeks and allow up to 42 weeks to be added and the system handles it, including a add new week button, so teacher can click it at the beginning of each new week
 
 
 	// Display Students 
@@ -142,12 +148,84 @@
 				week2: 2,
 				totalAttendance: 0
 			}
-		]
+		],
+
+		addNewStudent: function (name, week1, week2){
+			this.students.push({
+				name: name,
+				week1: week1,
+				week2: week2,
+				totalAttendance: 0
+			});
+
+		students.init();
+
+		},
+
+		deleteStudent: function(position){
+			this.students.splice(position, 1);
+			students.init();
+		},
+
+		editStudentName: function(position, name){
+			this.students[position].name = name;
+			students.init();
+		},
+
+		totalAttendance: function(i){
+			for (var i = 0; i < students.students.length; i++){
+
+				//10 days is tht total school days, so we deduct the total vs the amount of days missed as final app must display days missed
+				var totalStudentDays = 10;
+				this.students[i].totalAttendance = totalStudentDays - (this.students[i].week1 + this.students[i].week2);	
+			};
+
+			console.log("Total Students " + students.students.length)
+		},
+
+		init: function (){
+			this.totalAttendance();
+
+			console.log(students.students);
+			display.displayStudents()
+		}
+
 	};
 
+	var display = {
 
-	students.students.push(dave);
-	students.students.push(deleteMe);
+		displayStudents: function(){
+
+			var outPut = document.getElementById('tempArea');
+
+			for (var i = 0; i < students.students.length; i++){
+
+				var studentName = studentName + " " + students.students[i].name + "'s " + "total days Missed: " + students.students[i].totalAttendance + "<br />";
+
+				var newStudent = studentName.replace("undefined", " "); //output was showing undefined for first item, so temp just removed the letters from the string, little cheat I know!
+
+				$(outPut).html(newStudent);
+			}
+
+		}
+	};
+
+	display.displayStudents()
+
+
+	//Add a new student CONSTRUCTOR
+	
+	
+
+	//new students.addNewStudent("PETER", 2, 2);
+
+	//var dave = new Student("Kevin", 5, 5);
+	//var deleteMe = new Student("DICKHEAD", 0, 0);
+
+	
+
+	//students.students.push(dave);
+	//students.students.push(deleteMe);
 
 
 	// Add new Student
@@ -158,7 +236,7 @@
 	students.students[0].week2 = 4;
 
 	//Delete Student
-	students.students.splice(5,1)
+	//students.students.splice(5,1)
 
 	// Function works out the total attendance of the selected student
 	function attendance(position){
@@ -171,14 +249,23 @@
 
 	}
 
-	console.log(students.students)
+
+	
+
+	
 
 	//Loads attendance function with the parameter the positon in the array
-	attendance(0);
-	attendance(1);
-	attendance(2);
-	attendance(3);
-	attendance(4);
+
+
+	//attendance(0);
+	//attendance(1);
+	//attendance(2);
+	//attendance(3);
+	//attendance(4);
+
+	students.init();
+
+	
 
 
 
