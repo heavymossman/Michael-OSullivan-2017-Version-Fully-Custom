@@ -61,6 +61,7 @@
 								<div class="col-md-12">
 
 								<p>TEMP OUTPUTAREA:</p>
+								<p id="totalStudents"></p>
 								<p id="tempArea"></p>
 
 								<table class="table">
@@ -197,6 +198,10 @@
 		displayStudents: function(){
 
 			var outPut = document.getElementById('tempArea');
+
+			totalStudents = "Total Students : " + students.students.length + "<br />";
+
+			$('#totalStudents').html(totalStudents) 
 
 			for (var i = 0; i < students.students.length; i++){
 
