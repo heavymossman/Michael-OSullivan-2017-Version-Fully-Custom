@@ -14,7 +14,7 @@
 							<h3>Udacity Attendance 2.0</h3>
 							<div class="row mt-2">
 								<div class="col-md-3">
-									<div class="dropdown">
+									<!--<div class="dropdown">
 										<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										    Week
 										</button>
@@ -43,15 +43,38 @@
 											<a class="dropdown-item" href="#">Friday</a>
 										</div>
 									</div>
+									<input class="form-control" id="week1Input" type="number">-->
+									<div class="form-group">
+									    <label for="exampleSelect1">Attendance Week 1</label>
+									    <select class="form-control" id="week1Input">
+									      <option>1</option>
+									      <option>2</option>
+									      <option>3</option>
+									      <option>4</option>
+									      <option>5</option>
+									    </select>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+									    <label for="exampleSelect1">Attendance Week 2</label>
+									    <select class="form-control" id="week2Input">
+									      <option>1</option>
+									      <option>2</option>
+									      <option>3</option>
+									      <option>4</option>
+									      <option>5</option>
+									    </select>
+									</div>
 								</div>
 								<div class="col-md-3">
 
-									
+									<label for="studentNameEnter">Enter Full Student Name</label>
 									<input class="form-control" placeholder="Enter New Student Name" id="studentNameEnter">
 
 								</div>
 								<div class="col-md-3">
-
+								<label for="studentNameSend">Save</label><br>
 									<button  class="btn btn-succes" id="studentNameSend">Submit</button>
 								
 								</div>
@@ -71,8 +94,7 @@
 											<th>Student Name</th>
 											<th>Week 1</th>
 											<th>Week 2</th>
-											<th>Week 3</th>
-											<th>Week 4</th>
+
 											<th>Days Missed</th>
 										</tr>
 									</thead>
@@ -121,6 +143,9 @@
 
 
 	// Display Students 
+
+	var masterSchoolDays = 10;
+
 	var students = {
 
 		students:[
@@ -175,10 +200,8 @@
 
 		totalAttendance: function(i){
 			for (var i = 0; i < students.students.length; i++){
-
 				//10 days is tht total school days, so we deduct the total vs the amount of days missed as final app must display days missed
-				var totalStudentDays = 10;
-				this.students[i].totalAttendance = totalStudentDays - (this.students[i].week1 + this.students[i].week2);	
+				this.students[i].totalAttendance = masterSchoolDays - (this.students[i].week1 + this.students[i].week2);	
 			};
 
 			console.log("Total Students " + students.students.length)
@@ -197,25 +220,52 @@
 
 		displayStudents: function(){
 
-			var outPut = document.getElementById('tempArea');
+			var studentName = '';
+
+			outPut = document.getElementById('tableNameOutput');
 
 			totalStudents = "Total Students : " + students.students.length + "<br />";
+			totalSchoolDays = "Total School Days : " + masterSchoolDays + "<br />";
 
 			$('#totalStudents').html(totalStudents) 
 
 			for (var i = 0; i < students.students.length; i++){
 
-				var studentName = studentName + " " + students.students[i].name + "'s " + "total days Missed: " + students.students[i].totalAttendance + "<br />";
+				var studentName = studentName + '<tr><th scope="row">' + " " + students.students[i].name + '<td>' + students.students[i].week1 + '</td>' + '<td>' + students.students[i].week2 + '</td>' + '<td>' + students.students[i].totalAttendance + '</td>' + "</tr>";
 
-				var newStudent = studentName.replace("undefined", " "); //output was showing undefined for first item, so temp just removed the letters from the string, little cheat I know!
-
-				$(outPut).html(newStudent);
+				$(outPut).html(studentName);
 			}
 
 		}
 	};
 
+	var handlers = {
+
+		addNewStudent: function(){
+
+			var btnEnterStudent = $('#studentNameSend');
+
+			btnEnterStudent.click(function(){
+
+				var newStudentName, week1, week2;
+
+				newStudentName = document.getElementById('studentNameEnter');
+				week1 = parseFloat(document.getElementById('week1Input').value);
+				week2 = parseFloat(document.getElementById('week2Input').value);
+				students.addNewStudent(newStudentName.value, week1, week2)
+
+				newStudentName.value = '';
+			});
+
+			students.init();
+			
+		}
+
+	};
+
 	display.displayStudents()
+	handlers.addNewStudent()
+	students.init();
 
 
 	//Add a new student CONSTRUCTOR
@@ -244,15 +294,7 @@
 	//students.students.splice(5,1)
 
 	// Function works out the total attendance of the selected student
-	function attendance(position){
-
-		var position = position;
-
-		var newAttendance = students.students[position].week1 + students.students[position].week2
-
-		students.students[position].totalAttendance = newAttendance;
-
-	}
+	
 
 
 	
@@ -268,7 +310,7 @@
 	//attendance(3);
 	//attendance(4);
 
-	students.init();
+	//students.init();
 
 	
 
