@@ -154,6 +154,30 @@
 
 		students:[
 
+			{
+				name:'Michael',
+				week1: 0,
+				week2: 0,
+				totalAttendance: 0
+			},
+			{
+				name:'Nicola',
+				week1: 0,
+				week2: 0,
+				totalAttendance: 0
+			},
+			{
+				name:'Lewis',
+				week1: 0,
+				week2: 0,
+				totalAttendance: 0
+			},
+			{
+				name:'Coco',
+				week1: 0,
+				week2: 0,
+				totalAttendance: 0
+			}
 		],
 
 		addNewStudent: function (name){
@@ -165,7 +189,6 @@
 			});
 
 		students.init();
-		handlers.detectCheckBoxChange();
 
 		},
 
@@ -181,21 +204,15 @@
 
 		totalAttendance: function(){
 			
-			for (var i = 0; i < students.students.length; i++){
-
-				var studentsCount =  $('.' + i ).children("input[type='checkbox']:checked").length;
-
-				//console.log(students.students[i].name + " " + studentsCount)
-
-				students.students[i].totalAttendance = studentsCount;
-
-				console.log(students.students[i].name + " " + students.students[i].totalAttendance)
-
-			};
+			//for (var i = 0; i < students.students.length; i++){
+				//10 days is tht total school days, so we deduct the total vs the amount of days missed as final app must display days missed
+				//this.students[i].totalAttendance = $('.' + i ).children("input[type='checkbox']:checked").length;     //masterSchoolDays //- (this.students[i].week1 + this.students[i].week2);	
+				
+			//}; 
 
 			
 			
-			
+			//students.init()
 		}, 
 
 		init: function (){
@@ -230,7 +247,7 @@
 
 			for (var i = 0; i < students.students.length; i++){
 
-				var studentName = studentName + '<tr><th scope="row">' + students.students[i].name + '<td><form class="week1 ' + i + '">' + checkbox +  '</form></td>' + '<td><form class="week2 ' + i + '">' + checkbox + '</td>' + '<td>' + students.students[i].totalAttendance + '</td>' + "</form></tr>";
+				var studentName = studentName + '<tr><th scope="row">' + students.students[i].name + '<td><form class="week1 ' + i + '">' + checkbox +  '</form></td>' + '<td><form class="week2 ' + i + '">' + checkbox + '</td>' + "</form></tr>";
 
 				$(outPut).html(studentName);
 			}
@@ -254,16 +271,18 @@
 
 			btnEnterStudent.click(function(){
 
-				var newStudentName;
+				var newStudentName, week1, week2;
 
 				newStudentName = document.getElementById('studentNameEnter');
-				students.addNewStudent(newStudentName.value)
+				week1 = parseFloat(document.getElementById('week1Input').value);
+				week2 = parseFloat(document.getElementById('week2Input').value);
+				students.addNewStudent(newStudentName.value, week1, week2)
 
 				newStudentName.value = '';
 			});
 
 			//display.refreshtotalAttendance();
-			
+			students.init()
 			
 		},
 
@@ -272,8 +291,7 @@
 
 			$(':checkbox').change(function() {
 
-				students.totalAttendance();
-				
+				handlers.checkChceckBox();
         	
 			}); 
 
