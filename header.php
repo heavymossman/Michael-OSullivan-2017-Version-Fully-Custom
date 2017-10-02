@@ -70,8 +70,10 @@
                     <a class="dropdown-item" href="pizza.php" id="">Pizza</a>
                     <a class="dropdown-item" href="school-reg.php" id="">School Register App</a>
                     <a class="dropdown-item" href="school-reg-v2.php" id="">School Register App V2</a>
+                    <a class="dropdown-item" href="school-reg-v3.php" id="">School Register App V3</a>
                     <a class="dropdown-item" href="practical-js.php" id="">Practical JS Course</a>
                     <a class="dropdown-item" href="uti-calc.php" id="">UTI Performance Calculator</a>
+                    <a class="dropdown-item" href="ko-js.php" id="">Knock Out JS (cat clicker)</a>
 
                   </div>
                 </li>
